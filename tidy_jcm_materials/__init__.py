@@ -1,5 +1,5 @@
 """
-Playground
+Tidy JCM materials
 =====
 
 Provides
@@ -14,6 +14,4 @@ Provides
 
 __version__ = "0.0.1"
 
-__all__ = ["add"]
-
-from playground.add import add
+__all__ = []

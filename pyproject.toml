@@ -15,7 +15,8 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "matplotlib"
+  "tidy3d",
+  "numpy"
 ]
 description = "Converts materials from tidy3d database to JCMwave compatible pole residue format"
 keywords = ["python"]
@@ -59,7 +60,7 @@ line-length = 88
 target-version = ['py310']
 
 [tool.codespell]
-ignore-words-list = "te, te/tm, te, ba, fpr, fpr_spacing, ro, nd, donot, schem"
+ignore-words-list = "tidy3d, jcm"
 
 [tool.pytest.ini_options]
 # addopts = --tb=no
