@@ -1,9 +1,5 @@
 name: Release PyPI
 
-concurrency:
-  group: release
-  cancel-in-progress: true
-
 on:
   push:
     tags: "v*"
@@ -14,7 +10,7 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     environment:
-      name: pypi
+      name: release
       url: https://pypi.org/p/tidy_jcm_materials
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
