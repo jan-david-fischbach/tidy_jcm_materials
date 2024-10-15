@@ -31,7 +31,8 @@ dev = [
   "pre-commit",
   "pytest",
   "pytest-cov",
-  "pytest_regressions"
+  "towncrier",
+  "tbump"
 ]
 docs = [
   "jupytext",
