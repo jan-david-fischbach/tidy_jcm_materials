@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import jcmwave
 import numpy as np
 from tidy3d import material_library
 
@@ -12,6 +11,11 @@ folder = Path(__file__).parent
 def test_generate_jcm_materials():
     tidy_mat = material_library["Ag"]["JohnsonChristy1972"]
     mat = gen_material(tidy_mat, domain_id=2)
+
+    try:
+        import jcmwave
+    except ImportError:
+        return
 
     omegas = np.linspace(2e15, 6e15, 50)
     jcmwave.daemon.shutdown()
