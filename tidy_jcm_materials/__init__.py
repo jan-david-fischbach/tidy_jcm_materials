@@ -2,16 +2,11 @@
 Tidy JCM materials
 =====
 
-Provides
-  A brief overview how to easily create python packages, that are:
-
-    + installable
-    + testable
-    + documented
-    -------------
-    = reproducible
+Export materials from the tidy3D aterial library for use in other EM solvers
 """
 
 __version__ = "0.1.1"
 
-__all__ = []
+from .generate import gen_material
+
+__all__ = ['gen_material']

@@ -4,6 +4,6 @@ Converts materials from tidy3d database to JCMwave compatible pole residue forma
 
 ## Usage
 
-## Installation
+```
 
-`make install`
+```

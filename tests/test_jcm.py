@@ -6,6 +6,7 @@ from tidy3d import material_library
 from tidy_jcm_materials.generate import gen_material
 
 folder = Path(__file__).parent
+import warnings
 
 
 def test_generate_jcm_materials():
@@ -15,6 +16,7 @@ def test_generate_jcm_materials():
     try:
         import jcmwave
     except ImportError:
+        warnings.warn('JCMwave not found. Will skip reextraction test')
         return
 
     omegas = np.linspace(2e15, 6e15, 50)
@@ -46,3 +48,6 @@ def test_generate_jcm_materials():
     eps_tidy = tidy_mat.eps_model(omegas / (2 * np.pi))
 
     assert np.allclose(eps_jcm, eps_tidy)
+
+def test_top_level_import():
+    from tidy_jcm_materials import gen_material
