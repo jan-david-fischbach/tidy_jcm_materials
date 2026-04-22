@@ -4,6 +4,10 @@ Converts materials from tidy3d database to JCMwave compatible pole residue forma
 
 ## Usage
 
-```
+``` python
+from tidy3d import material_library
+from tidy_jcm_materials.generate import gen_material
 
+tidy_mat = material_library["Ag"]["JohnsonChristy1972"]
+mat = gen_material(tidy_mat, domain_id=2, name="gold")
 ```
