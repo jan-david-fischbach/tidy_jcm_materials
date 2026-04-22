@@ -48,6 +48,7 @@ def test_generate_jcm_materials():
     eps_tidy = tidy_mat.eps_model(omegas / (2 * np.pi))
 
     assert np.allclose(eps_jcm, eps_tidy)
+    
 
 def test_top_level_import():
     from tidy_jcm_materials import gen_material
